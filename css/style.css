@@ -161,6 +161,10 @@ nav {
     padding: 0 !important;
 }
 
+.navbar-toggler:focus {
+        box-shadow: 0 0 0 0.25rem var(--main-color);
+}
+
 .nav-scroll {
     box-shadow:  4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -219,6 +223,20 @@ nav .register-btn {
     nav .login-btn {
         margin: 10px 0;
     }
+
+    nav {
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+    }
+
+    nav li {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav .nav-link::before {
+        display: none;
+    }
 }
 
 /* End navbar */
@@ -245,6 +263,12 @@ nav .register-btn {
     height: 100vh;
 }
 
+@media (max-width: 576px) {
+    #carouselExampleCaptions img {
+        height: 500px;
+    }
+}
+
 .carousel-caption {
     top: 50%;
     left: 50%;
@@ -261,6 +285,16 @@ nav .register-btn {
 
 .carousel-caption p {
     font-size: 18px;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 26px;
+    }
+    
+    .carousel-caption p {
+        font-size: 12px;
+    }
 }
 
 .carousel button.active {
@@ -387,6 +421,12 @@ nav .register-btn {
 .feature-cards .feature p {
     color: #393939;
 }
+
+@media (max-width: 767px) {
+    .features .feature {
+        margin-top: 60px;
+    }
+}
 /* End Features */
 
 /* Start Courses */
@@ -474,6 +514,33 @@ nav .register-btn {
 .course i {
     color: #f5c800;
 }
+
+@media (max-width: 992px) {
+    .courses .course {
+        width: calc(33.333% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .courses .course {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 576px) {
+    .courses .course {
+        width: 100%;
+    }
+
+    .courses .course:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    .courses .course img {
+        height: auto;
+    }
+
+}
 /* End Courses */
 
 /* Start Call-to-action */
@@ -482,6 +549,7 @@ nav .register-btn {
     background-color: #333333;
     color: var(--white-color);
     overflow: hidden;
+    padding-top: 50px;
 }
 
 .call-to-action h2 {
@@ -522,6 +590,7 @@ nav .register-btn {
 
 .call-to-action .call-image {
     position: relative;
+    text-align: left;
 }
 
 .call-to-action .call-image img {
@@ -533,7 +602,7 @@ nav .register-btn {
     background-color: #3e3e3e;
     position: absolute;
     bottom: -40px;
-    left: 0;
+    left: -60px;
     border-radius: 50%;
     width: 400px;
     height: 400px;
@@ -569,6 +638,33 @@ nav .register-btn {
     transform: translateX(-50%);
     padding: 20px;
     border: 20px solid #464646;
+}
+
+@media (max-width: 992px) {
+    .call-to-action {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .call-to-action .shape {
+        left: 70px;
+    }
+
+    .call-to-action .call-image {
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .call-to-action {
+        padding: 50px 20px 0;
+    }
+    
+    .call-to-action .shape {
+        display: none;
+    }
 }
 
 /* End Call-to-action */
@@ -632,6 +728,12 @@ nav .register-btn {
     font-weight: 700;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .categories .category {
+        margin-bottom: 20px;
+    }
+}
 /* End Categories */
 
 /* Start Become an instructor */
@@ -674,6 +776,12 @@ nav .register-btn {
 .instructor .instructor-img img {
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 992px) {
+    .instructor .instructor-img::after {
+        width: 400px;
+    }
 }
 /* End Become an instructor */
 
@@ -726,5 +834,16 @@ footer .contact-info div {
 
 footer .contact-info i {
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .pages,
+    footer .contact-info {
+        margin-top: 50px;
+    }
 }
 /* End Footer */
